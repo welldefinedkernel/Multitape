@@ -1,0 +1,728 @@
+{
+  "version": 1,
+  "machine": {
+    "name": "1a_Roma_O(n^2)",
+    "tapeCount": 1,
+    "input": "1111111111",
+    "states": [
+      {
+        "id": "start",
+        "name": "DELIMIT_LEFT",
+        "halt": false
+      },
+      {
+        "id": "f3823dc8-292e-4381-af15-413e198f233b",
+        "name": "DELIMIT_RIGHT",
+        "halt": false
+      },
+      {
+        "id": "afacd136-1529-4f7c-be9e-e9ee4d01a4a3",
+        "name": "INIT",
+        "halt": false
+      },
+      {
+        "id": "8565df56-68a4-42ba-a075-c9436b2d0192",
+        "name": "ACCEPT",
+        "halt": true
+      },
+      {
+        "id": "ce2a2377-cc55-445a-b89d-c52411c435bf",
+        "name": "TO_START",
+        "halt": false
+      },
+      {
+        "id": "16460552-05bb-4b79-9dd4-28ae90dac172",
+        "name": "READ",
+        "halt": false
+      },
+      {
+        "id": "a3e48d96-f26a-4c3e-a36f-0b217a5412a0",
+        "name": "ADD",
+        "halt": false
+      },
+      {
+        "id": "1282e587-1e98-46e2-9987-8d8201cbe11d",
+        "name": "TO_ADD",
+        "halt": false
+      },
+      {
+        "id": "7ea2a655-a7b2-4074-aabf-3ccdcfcb5e19",
+        "name": "CARRY",
+        "halt": false
+      },
+      {
+        "id": "ed90d076-14df-449c-8044-6488da9a2df0",
+        "name": "TO_READ",
+        "halt": false
+      },
+      {
+        "id": "586cc4ae-17c7-449c-b3e2-d2518e1addd0",
+        "name": "TO_COPY",
+        "halt": false
+      },
+      {
+        "id": "a8f0af60-9d22-4d0a-b772-5d9f4c584616",
+        "name": "CARRYING_0",
+        "halt": false
+      },
+      {
+        "id": "e034342a-b06c-4562-ae97-4e3a3b72b28b",
+        "name": "CARRYING_1",
+        "halt": false
+      },
+      {
+        "id": "9eef5bc5-9be1-4e0f-9700-c3f5e633575a",
+        "name": "PASTING_0",
+        "halt": false
+      },
+      {
+        "id": "ddc8e062-af5a-4530-b6a1-931dfd0aec86",
+        "name": "PASTING_1",
+        "halt": false
+      },
+      {
+        "id": "e58f0889-ee18-4f76-8576-ac158c29a7ba",
+        "name": "TO_HIGHEST_OUTPUT",
+        "halt": false
+      },
+      {
+        "id": "e3d2ead5-27a8-4efd-9b08-67ee33632b30",
+        "name": "COPYING",
+        "halt": false
+      }
+    ],
+    "initialState": "afacd136-1529-4f7c-be9e-e9ee4d01a4a3",
+    "transitions": [
+      {
+        "id": "fa3ac089-4ff0-4a72-91df-8eed0bfe31d2",
+        "from": "afacd136-1529-4f7c-be9e-e9ee4d01a4a3",
+        "to": "start",
+        "read": [
+          "1"
+        ],
+        "write": [
+          "1"
+        ],
+        "move": [
+          "L"
+        ]
+      },
+      {
+        "id": "bbd722b9-734e-48a4-a42c-f435a1bb99ca",
+        "from": "start",
+        "to": "f3823dc8-292e-4381-af15-413e198f233b",
+        "read": [
+          "λ"
+        ],
+        "write": [
+          "#"
+        ],
+        "move": [
+          "R"
+        ]
+      },
+      {
+        "id": "c1334500-a25f-4c61-bc0a-16f16e2f4898",
+        "from": "f3823dc8-292e-4381-af15-413e198f233b",
+        "to": "f3823dc8-292e-4381-af15-413e198f233b",
+        "read": [
+          "1"
+        ],
+        "write": [
+          "1"
+        ],
+        "move": [
+          "R"
+        ]
+      },
+      {
+        "id": "0b814095-b366-4c87-bba9-c5b83865864d",
+        "from": "f3823dc8-292e-4381-af15-413e198f233b",
+        "to": "ce2a2377-cc55-445a-b89d-c52411c435bf",
+        "read": [
+          "λ"
+        ],
+        "write": [
+          "#"
+        ],
+        "move": [
+          "L"
+        ]
+      },
+      {
+        "id": "325cf80a-bb4f-471b-9e6b-4921cdfd60f8",
+        "from": "ce2a2377-cc55-445a-b89d-c52411c435bf",
+        "to": "ce2a2377-cc55-445a-b89d-c52411c435bf",
+        "read": [
+          "1"
+        ],
+        "write": [
+          "1"
+        ],
+        "move": [
+          "L"
+        ]
+      },
+      {
+        "id": "0a2623bd-274f-4e07-bbb3-7f42e53b2be0",
+        "from": "ce2a2377-cc55-445a-b89d-c52411c435bf",
+        "to": "16460552-05bb-4b79-9dd4-28ae90dac172",
+        "read": [
+          "#"
+        ],
+        "write": [
+          "#"
+        ],
+        "move": [
+          "R"
+        ]
+      },
+      {
+        "id": "96454e04-25c5-4bc0-91dc-cf84d0f57aa6",
+        "from": "16460552-05bb-4b79-9dd4-28ae90dac172",
+        "to": "1282e587-1e98-46e2-9987-8d8201cbe11d",
+        "read": [
+          "1"
+        ],
+        "write": [
+          "λ"
+        ],
+        "move": [
+          "L"
+        ]
+      },
+      {
+        "id": "0b10dd11-34f4-4095-86aa-485cb1263cdd",
+        "from": "1282e587-1e98-46e2-9987-8d8201cbe11d",
+        "to": "1282e587-1e98-46e2-9987-8d8201cbe11d",
+        "read": [
+          "λ"
+        ],
+        "write": [
+          "λ"
+        ],
+        "move": [
+          "L"
+        ]
+      },
+      {
+        "id": "a6cd149c-0d39-4d48-afb9-28176662c053",
+        "from": "1282e587-1e98-46e2-9987-8d8201cbe11d",
+        "to": "a3e48d96-f26a-4c3e-a36f-0b217a5412a0",
+        "read": [
+          "#"
+        ],
+        "write": [
+          "#"
+        ],
+        "move": [
+          "L"
+        ]
+      },
+      {
+        "id": "83e7ef75-b145-48aa-b65e-aa5bacc456d2",
+        "from": "a3e48d96-f26a-4c3e-a36f-0b217a5412a0",
+        "to": "ed90d076-14df-449c-8044-6488da9a2df0",
+        "read": [
+          "λ"
+        ],
+        "write": [
+          "1"
+        ],
+        "move": [
+          "R"
+        ]
+      },
+      {
+        "id": "561e3c15-b3bd-46b3-9446-ed2a4d96aa9d",
+        "from": "ed90d076-14df-449c-8044-6488da9a2df0",
+        "to": "16460552-05bb-4b79-9dd4-28ae90dac172",
+        "read": [
+          "#"
+        ],
+        "write": [
+          "#"
+        ],
+        "move": [
+          "R"
+        ]
+      },
+      {
+        "id": "ab78b7ae-4a1c-4e99-b4eb-54587796e1c8",
+        "from": "ed90d076-14df-449c-8044-6488da9a2df0",
+        "to": "ed90d076-14df-449c-8044-6488da9a2df0",
+        "read": [
+          "0"
+        ],
+        "write": [
+          "0"
+        ],
+        "move": [
+          "R"
+        ]
+      },
+      {
+        "id": "45d959a7-91d3-4a57-8a6e-700e1ce7d990",
+        "from": "ed90d076-14df-449c-8044-6488da9a2df0",
+        "to": "ed90d076-14df-449c-8044-6488da9a2df0",
+        "read": [
+          "1"
+        ],
+        "write": [
+          "1"
+        ],
+        "move": [
+          "R"
+        ]
+      },
+      {
+        "id": "42273d38-5e70-49b2-8127-8c352a3c35bd",
+        "from": "a3e48d96-f26a-4c3e-a36f-0b217a5412a0",
+        "to": "ed90d076-14df-449c-8044-6488da9a2df0",
+        "read": [
+          "0"
+        ],
+        "write": [
+          "1"
+        ],
+        "move": [
+          "R"
+        ]
+      },
+      {
+        "id": "578faf30-2538-4311-82bb-f0f7344c70af",
+        "from": "a3e48d96-f26a-4c3e-a36f-0b217a5412a0",
+        "to": "7ea2a655-a7b2-4074-aabf-3ccdcfcb5e19",
+        "read": [
+          "1"
+        ],
+        "write": [
+          "0"
+        ],
+        "move": [
+          "L"
+        ]
+      },
+      {
+        "id": "9c1fc1f3-eb87-424a-91f3-58ede6c9a78c",
+        "from": "7ea2a655-a7b2-4074-aabf-3ccdcfcb5e19",
+        "to": "ed90d076-14df-449c-8044-6488da9a2df0",
+        "read": [
+          "0"
+        ],
+        "write": [
+          "1"
+        ],
+        "move": [
+          "R"
+        ]
+      },
+      {
+        "id": "45d67d47-2d0a-4019-95fd-af2496808007",
+        "from": "7ea2a655-a7b2-4074-aabf-3ccdcfcb5e19",
+        "to": "7ea2a655-a7b2-4074-aabf-3ccdcfcb5e19",
+        "read": [
+          "1"
+        ],
+        "write": [
+          "0"
+        ],
+        "move": [
+          "L"
+        ]
+      },
+      {
+        "id": "8c0a8680-1eb0-42f0-b7fd-f7f1c25c93f3",
+        "from": "16460552-05bb-4b79-9dd4-28ae90dac172",
+        "to": "16460552-05bb-4b79-9dd4-28ae90dac172",
+        "read": [
+          "λ"
+        ],
+        "write": [
+          "λ"
+        ],
+        "move": [
+          "R"
+        ]
+      },
+      {
+        "id": "08a018e7-ff6b-4d42-a1ec-05cbe5f92a41",
+        "from": "7ea2a655-a7b2-4074-aabf-3ccdcfcb5e19",
+        "to": "ed90d076-14df-449c-8044-6488da9a2df0",
+        "read": [
+          "λ"
+        ],
+        "write": [
+          "1"
+        ],
+        "move": [
+          "R"
+        ]
+      },
+      {
+        "id": "bb71d2b3-647c-494c-87e9-2587225ed477",
+        "from": "16460552-05bb-4b79-9dd4-28ae90dac172",
+        "to": "586cc4ae-17c7-449c-b3e2-d2518e1addd0",
+        "read": [
+          "#"
+        ],
+        "write": [
+          "λ"
+        ],
+        "move": [
+          "L"
+        ]
+      },
+      {
+        "id": "08b8e6b6-4535-4365-90b5-947d0c8537a3",
+        "from": "586cc4ae-17c7-449c-b3e2-d2518e1addd0",
+        "to": "e58f0889-ee18-4f76-8576-ac158c29a7ba",
+        "read": [
+          "#"
+        ],
+        "write": [
+          "#"
+        ],
+        "move": [
+          "L"
+        ]
+      },
+      {
+        "id": "2507c0c9-70d7-46a2-9521-d773feb70a57",
+        "from": "586cc4ae-17c7-449c-b3e2-d2518e1addd0",
+        "to": "586cc4ae-17c7-449c-b3e2-d2518e1addd0",
+        "read": [
+          "1"
+        ],
+        "write": [
+          "1"
+        ],
+        "move": [
+          "L"
+        ]
+      },
+      {
+        "id": "de51d5d6-971f-484c-afa2-98373daec240",
+        "from": "a8f0af60-9d22-4d0a-b772-5d9f4c584616",
+        "to": "9eef5bc5-9be1-4e0f-9700-c3f5e633575a",
+        "read": [
+          "#"
+        ],
+        "write": [
+          "#"
+        ],
+        "move": [
+          "R"
+        ]
+      },
+      {
+        "id": "34a23200-e450-4d11-aa89-b27cb2e0f750",
+        "from": "a8f0af60-9d22-4d0a-b772-5d9f4c584616",
+        "to": "a8f0af60-9d22-4d0a-b772-5d9f4c584616",
+        "read": [
+          "λ"
+        ],
+        "write": [
+          "λ"
+        ],
+        "move": [
+          "R"
+        ]
+      },
+      {
+        "id": "b9403931-72a9-4a1b-9c0a-7f535d0bb02a",
+        "from": "e034342a-b06c-4562-ae97-4e3a3b72b28b",
+        "to": "ddc8e062-af5a-4530-b6a1-931dfd0aec86",
+        "read": [
+          "#"
+        ],
+        "write": [
+          "#"
+        ],
+        "move": [
+          "R"
+        ]
+      },
+      {
+        "id": "52da4de4-463d-46e4-aeea-1460475bfa7f",
+        "from": "e034342a-b06c-4562-ae97-4e3a3b72b28b",
+        "to": "e034342a-b06c-4562-ae97-4e3a3b72b28b",
+        "read": [
+          "λ"
+        ],
+        "write": [
+          "λ"
+        ],
+        "move": [
+          "R"
+        ]
+      },
+      {
+        "id": "4f852049-ede4-4b54-88d7-f942370ce8e4",
+        "from": "9eef5bc5-9be1-4e0f-9700-c3f5e633575a",
+        "to": "586cc4ae-17c7-449c-b3e2-d2518e1addd0",
+        "read": [
+          "λ"
+        ],
+        "write": [
+          "0"
+        ],
+        "move": [
+          "L"
+        ]
+      },
+      {
+        "id": "300bdcac-a53d-48d5-82cb-d5a7a7985a0d",
+        "from": "9eef5bc5-9be1-4e0f-9700-c3f5e633575a",
+        "to": "9eef5bc5-9be1-4e0f-9700-c3f5e633575a",
+        "read": [
+          "1"
+        ],
+        "write": [
+          "1"
+        ],
+        "move": [
+          "R"
+        ]
+      },
+      {
+        "id": "af31f747-b56c-474f-825b-e9363546f9f5",
+        "from": "ddc8e062-af5a-4530-b6a1-931dfd0aec86",
+        "to": "586cc4ae-17c7-449c-b3e2-d2518e1addd0",
+        "read": [
+          "λ"
+        ],
+        "write": [
+          "1"
+        ],
+        "move": [
+          "L"
+        ]
+      },
+      {
+        "id": "dc56589a-afcc-4077-ad49-8a185e2fae85",
+        "from": "ddc8e062-af5a-4530-b6a1-931dfd0aec86",
+        "to": "ddc8e062-af5a-4530-b6a1-931dfd0aec86",
+        "read": [
+          "1"
+        ],
+        "write": [
+          "1"
+        ],
+        "move": [
+          "R"
+        ]
+      },
+      {
+        "id": "ea089e82-af7c-4ccb-ace7-5d6e5a9cbc80",
+        "from": "e58f0889-ee18-4f76-8576-ac158c29a7ba",
+        "to": "e3d2ead5-27a8-4efd-9b08-67ee33632b30",
+        "read": [
+          "λ"
+        ],
+        "write": [
+          "λ"
+        ],
+        "move": [
+          "R"
+        ]
+      },
+      {
+        "id": "b92b1a2f-75e0-47c2-ab2b-dbb451c0d590",
+        "from": "e58f0889-ee18-4f76-8576-ac158c29a7ba",
+        "to": "e58f0889-ee18-4f76-8576-ac158c29a7ba",
+        "read": [
+          "0"
+        ],
+        "write": [
+          "0"
+        ],
+        "move": [
+          "L"
+        ]
+      },
+      {
+        "id": "01a939d2-f6db-4858-b597-7b57dc2b18b8",
+        "from": "e58f0889-ee18-4f76-8576-ac158c29a7ba",
+        "to": "e58f0889-ee18-4f76-8576-ac158c29a7ba",
+        "read": [
+          "1"
+        ],
+        "write": [
+          "1"
+        ],
+        "move": [
+          "L"
+        ]
+      },
+      {
+        "id": "a94ecc58-2529-4cc7-87fb-3cfae58af9f3",
+        "from": "586cc4ae-17c7-449c-b3e2-d2518e1addd0",
+        "to": "586cc4ae-17c7-449c-b3e2-d2518e1addd0",
+        "read": [
+          "λ"
+        ],
+        "write": [
+          "λ"
+        ],
+        "move": [
+          "L"
+        ]
+      },
+      {
+        "id": "e523874b-3a59-4736-ad9a-15634f36a0c9",
+        "from": "e3d2ead5-27a8-4efd-9b08-67ee33632b30",
+        "to": "e034342a-b06c-4562-ae97-4e3a3b72b28b",
+        "read": [
+          "1"
+        ],
+        "write": [
+          "λ"
+        ],
+        "move": [
+          "R"
+        ]
+      },
+      {
+        "id": "5e42a127-35b2-4425-b107-e55fc8129987",
+        "from": "e3d2ead5-27a8-4efd-9b08-67ee33632b30",
+        "to": "a8f0af60-9d22-4d0a-b772-5d9f4c584616",
+        "read": [
+          "0"
+        ],
+        "write": [
+          "λ"
+        ],
+        "move": [
+          "R"
+        ]
+      },
+      {
+        "id": "154baa0b-3f47-48ff-a12b-e06867a1c046",
+        "from": "e034342a-b06c-4562-ae97-4e3a3b72b28b",
+        "to": "e034342a-b06c-4562-ae97-4e3a3b72b28b",
+        "read": [
+          "1"
+        ],
+        "write": [
+          "1"
+        ],
+        "move": [
+          "R"
+        ]
+      },
+      {
+        "id": "2b8321a3-cca5-4928-b72d-a4ecb3f4426f",
+        "from": "e034342a-b06c-4562-ae97-4e3a3b72b28b",
+        "to": "e034342a-b06c-4562-ae97-4e3a3b72b28b",
+        "read": [
+          "0"
+        ],
+        "write": [
+          "0"
+        ],
+        "move": [
+          "R"
+        ]
+      },
+      {
+        "id": "758cbf39-3e84-4a46-81e0-5d0f61caa782",
+        "from": "a8f0af60-9d22-4d0a-b772-5d9f4c584616",
+        "to": "a8f0af60-9d22-4d0a-b772-5d9f4c584616",
+        "read": [
+          "1"
+        ],
+        "write": [
+          "1"
+        ],
+        "move": [
+          "R"
+        ]
+      },
+      {
+        "id": "372c6fa9-125b-4db8-bffb-908512170c08",
+        "from": "a8f0af60-9d22-4d0a-b772-5d9f4c584616",
+        "to": "a8f0af60-9d22-4d0a-b772-5d9f4c584616",
+        "read": [
+          "0"
+        ],
+        "write": [
+          "0"
+        ],
+        "move": [
+          "R"
+        ]
+      },
+      {
+        "id": "efe77569-4a84-4af8-afaa-d7eb353a344b",
+        "from": "e3d2ead5-27a8-4efd-9b08-67ee33632b30",
+        "to": "8565df56-68a4-42ba-a075-c9436b2d0192",
+        "read": [
+          "#"
+        ],
+        "write": [
+          "λ"
+        ],
+        "move": [
+          "R"
+        ]
+      },
+      {
+        "id": "37f9cd55-70b9-4c40-9572-777bdcf40922",
+        "from": "afacd136-1529-4f7c-be9e-e9ee4d01a4a3",
+        "to": "8565df56-68a4-42ba-a075-c9436b2d0192",
+        "read": [
+          "λ"
+        ],
+        "write": [
+          "0"
+        ],
+        "move": [
+          "N"
+        ]
+      },
+      {
+        "id": "6db8bed6-3425-4db7-a47b-ea13774cbdb8",
+        "from": "9eef5bc5-9be1-4e0f-9700-c3f5e633575a",
+        "to": "9eef5bc5-9be1-4e0f-9700-c3f5e633575a",
+        "read": [
+          "0"
+        ],
+        "write": [
+          "0"
+        ],
+        "move": [
+          "R"
+        ]
+      },
+      {
+        "id": "868c3d41-3f79-4ba2-91c8-954fd7bf0e58",
+        "from": "ddc8e062-af5a-4530-b6a1-931dfd0aec86",
+        "to": "ddc8e062-af5a-4530-b6a1-931dfd0aec86",
+        "read": [
+          "0"
+        ],
+        "write": [
+          "0"
+        ],
+        "move": [
+          "R"
+        ]
+      },
+      {
+        "id": "1a5afeb7-6578-471d-98d7-c2c6dd69d99a",
+        "from": "586cc4ae-17c7-449c-b3e2-d2518e1addd0",
+        "to": "586cc4ae-17c7-449c-b3e2-d2518e1addd0",
+        "read": [
+          "0"
+        ],
+        "write": [
+          "0"
+        ],
+        "move": [
+          "L"
+        ]
+      }
+    ]
+  }
+}
